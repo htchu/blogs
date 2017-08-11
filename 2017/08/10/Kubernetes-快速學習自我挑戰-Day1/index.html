@@ -3,18 +3,44 @@
 <head>
     <meta charset="utf-8">
     
-    <title>彙整：: 2017/8 | Vincent&#39;s Corner</title>
+    <title>Kubernetes 快速學習自我挑戰 Day1 | Vincent&#39;s Corner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Who knows what fantastic things around Vincent&apos;s corner?">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vincent's Corner">
-<meta property="og:url" content="https://tingsyuanwang.github.io/archives/2017/08/index.html">
+        <meta name="keywords" content="Kubernetes" />
+    
+    <meta name="description" content="Kubernetes 觀念簡介
+什麼是 Kubernetes
+
+Kubernetes 是一個開源的 orchestration system (編排系統)，提供給 Docker containers 做使用
+
+它可以讓你在機器的 cluster 中規劃 containers
+你可以在一台機器上面跑很多 containers
+你可以運行 long running services (像是網頁應用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kubernetes 快速學習自我挑戰 Day1">
+<meta property="og:url" content="https://tingsyuanwang.github.io/2017/08/10/Kubernetes-快速學習自我挑戰-Day1/index.html">
 <meta property="og:site_name" content="Vincent's Corner">
-<meta property="og:description" content="Who knows what fantastic things around Vincent&apos;s corner?">
+<meta property="og:description" content="Kubernetes 觀念簡介
+什麼是 Kubernetes
+
+Kubernetes 是一個開源的 orchestration system (編排系統)，提供給 Docker containers 做使用
+
+它可以讓你在機器的 cluster 中規劃 containers
+你可以在一台機器上面跑很多 containers
+你可以運行 long running services (像是網頁應用">
+<meta property="og:image" content="https://tingsyuanwang.github.io/blogs/images/learning/kubernetes/kubernetesday1.png">
+<meta property="og:updated_time" content="2017-08-11T14:45:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vincent's Corner">
-<meta name="twitter:description" content="Who knows what fantastic things around Vincent&apos;s corner?">
+<meta name="twitter:title" content="Kubernetes 快速學習自我挑戰 Day1">
+<meta name="twitter:description" content="Kubernetes 觀念簡介
+什麼是 Kubernetes
+
+Kubernetes 是一個開源的 orchestration system (編排系統)，提供給 Docker containers 做使用
+
+它可以讓你在機器的 cluster 中規劃 containers
+你可以在一台機器上面跑很多 containers
+你可以運行 long running services (像是網頁應用">
+<meta name="twitter:image" content="https://tingsyuanwang.github.io/blogs/images/learning/kubernetes/kubernetesday1.png">
 <meta property="fb:admins" content="dtvgood202">
 <meta property="fb:app_id" content="176717762750155">
     
@@ -136,369 +162,303 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>彙整：: 2017/8
+    <a class="page-title-link" href="/blogs/categories/學習歷程/">學習歷程</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
+                            <article id="post-Kubernetes-快速學習自我挑戰-Day1" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Kubernetes 快速學習自我挑戰 Day1
+        </h1>
+    
 
-    
-    
+            </header>
         
         
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/blogs/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
+            <div class="article-subtitle">
+                <a href="/blogs/2017/08/10/Kubernetes-快速學習自我挑戰-Day1/" class="article-date">
+    <time datetime="2017-08-10T07:02:09.000Z" itemprop="datePublished">2017-08-10</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blogs/tags/Kubernetes/">Kubernetes</a></li></ul>
+
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <a href="/blogs/2017/08/10/Kubernetes-快速學習自我挑戰-Day1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blogs/images/learning/kubernetes/kubernetesday1.png)" alt="Kubernetes 快速學習自我挑戰 Day1" class="thumbnail-image"></span>
-    
-    
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="fb-comments-count" data-href="https://tingsyuanwang.github.io/blogs/2017/08/10/Kubernetes-快速學習自我挑戰-Day1/">0</span> 則評論
-    
-</span>
+        <div class="article-entry" itemprop="articleBody">
+            <img src="/blogs/images/learning/kubernetes/kubernetesday1.png">
+<hr>
+<h3>Kubernetes 觀念簡介</h3>
+<h4>什麼是 Kubernetes</h4>
+<ol>
+<li>Kubernetes 是一個開源的 <strong>orchestration</strong> system (編排系統)，提供給 Docker containers 做使用
+<ul>
+<li>它可以讓你在機器的 cluster 中規劃 <strong>containers</strong></li>
+<li>你可以在一台機器上面跑<strong>很多 containers</strong></li>
+<li>你可以運行 long running <strong>services</strong> (像是網頁應用程式)</li>
+<li>Kubernetes 會<strong>控管</strong>這些 container 的狀態
+<ul>
+<li>可以在特定 nodes 上啟動 container</li>
+<li>當 container 被砍的時候，會再重啟一個 container</li>
+<li>可以將 containers 從一個 node 移到另外一個 node</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>跟只有手動運行一些 docker containers 在一個 host 上不同的是，Kubernetes 是一個將會為你管控 container 的平台</li>
+<li>Kubernetes clusters 可以從一個 node 開始到數千個 nodes</li>
+<li>其他有名的 docker orchestrators：
+<ul>
+<li>Docker Swarm</li>
+<li>Mesos</li>
+</ul>
+</li>
+</ol>
+<h5>Kubernetes 的優點</h5>
+<ol>
+<li>你可以在任何地方運行 <strong>Kubernetes</strong>
+<ul>
+<li>On-premise (自有資料中心)</li>
+<li>公開 (Google cloud, AWS)</li>
+<li>混合：公開和私有</li>
+</ul>
+</li>
+<li>高度模組化</li>
+<li>開源</li>
+<li>非常好的社群</li>
+<li>Google 支援</li>
+</ol>
+<h4>Container 簡介</h4>
+<ol>
+<li>Docker 是最受歡迎的 container 軟體
+<ul>
+<li>Docker 的另外一個方案是 rkt，同樣也可以與 Kubernetes 一同運行</li>
+</ul>
+</li>
+<li>Dokcer <strong>Engine</strong>
+<ul>
+<li>The Docker runtime</li>
+<li>讓 docker images 運行的軟體</li>
+</ul>
+</li>
+<li>Docker Hub
+<ul>
+<li>用來儲存和取得 docker images 的線上服務</li>
+<li>同樣也允許你線上<strong>建立 docker</strong> images</li>
+</ul>
+</li>
+</ol>
+<h5>Docker 的優點</h5>
+<ol>
+<li><strong>獨立</strong>：使用所有的 dependencies 來 ship binary
+<ul>
+<li>不需要裕行在自己的機器上，不過不能用在產品化</li>
+</ul>
+</li>
+<li>在 Dev、QA和產品化環境更加<strong>接近</strong>，因為使用同樣的 binary</li>
+<li>Docker 讓開發團隊可以<strong>更加快速</strong>的 ship</li>
+<li>你可以運行完全一樣的 docker image 在筆電、資料中心虛擬機和雲端主機供應商</li>
+<li>Docker 對作業系統級的分離使用 Linux Containers (一個核心特色)</li>
+</ol>
+<h4>Kubernetes 設定</h4>
+<ol>
+<li>Kubernetes 應該要可以在<strong>任何地方</strong>運行</li>
+<li>但是，對於雲端供應商，像是 AWS 和 GCE，還是有很多<strong>整合</strong>要做
+<ul>
+<li>像是 <strong>Volumes</strong> 和 <strong>外部 Load Balances</strong> 只能運行在<strong>被支援</strong>的雲端供應商</li>
+</ul>
+</li>
+<li>會先使用 <strong>minikube</strong> 來快速讓本機單一機器用 Kubernetes cluster 運行起來</li>
+<li>接下來會用 <strong>kops</strong> 在 AWS 上把一個 cluster 運行起來
+<ul>
+<li>kops 是可以被用來運行高可用型的 <strong>產品化 cluster</strong></li>
+</ul>
+</li>
+<li>使用自己的實驗室是有可能的(而且高度建議)</li>
+</ol>
+<ul>
+<li>使用 AWS 免費方案 (給你 t2.micro’s 750 小時/月)
+<ul>
+<li><a href="https://aws.amazon.com" target="_blank" rel="external">https://aws.amazon.com</a></li>
+</ul>
+</li>
+<li>使用本地機器
+<ul>
+<li>使用 <a href="https://github.com/kubernetes/minikube" target="_blank" rel="external">minikube</a></li>
+</ul>
+</li>
+<li>使用 Digital Ocean</li>
+</ul>
+<h4>使用 minikube 在本地端設定</h4>
+<ol>
+<li><strong>Minikube</strong> 是一個讓 Kubernetes 在本地端運行變簡單的工具</li>
+<li>Minikube 運行單一 node Kubernetes cluster 在 Linux VM 裡面</li>
+<li>它的目標用戶是那些想要拿來測試或是用它來開發的人</li>
+<li>它不能運行在產品化的 cluster，它是一個沒有高可用性的單一 node 機器</li>
+<li>它可以運行在 <strong>Windows</strong>、<strong>Linux</strong> 和 <strong>MacOS</strong></li>
+<li>你會需要安裝 <strong>虛擬化軟體</strong> 才能運行 minikube
+<ul>
+<li>Virtualbox 是免費的且可以<a href="https://www.virtualbox.org/" target="_blank" rel="external">直接下載</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/kubernetes/minikube" target="_blank" rel="external">下載 minikube</a></li>
+<li>啟動你的 cluster 只要(在 shell/terminal/powershell)輸入 <code>minikube start</code></li>
+</ol>
+<h4>安裝 minikube</h4>
+<ol>
+<li><a href="https://github.com/kubernetes/minikube/releases" target="_blank" rel="external">安裝最新版本的 minikube</a></li>
+<li>安裝完成之後，啟動 minikube <code>minikube start</code></li>
+<li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank" rel="external">安裝 kubectl</a></li>
+<li><code>chmod +x kubectl &amp;&amp; sudo mv kubectl /usr/local/bin/</code></li>
+<li><code>kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080</code></li>
+<li><code>kubectl expose development hello-minikube --type=NodePort</code></li>
+<li><code>minikube service hello-minikube --url</code></li>
+<li><code>minikube stop</code></li>
+</ol>
+<h4>Kops 介紹</h4>
+<ol>
+<li>設置 Kubernetes 在 AWS 上面，可以使用叫做 <strong>kops</strong> 的工具
+<ul>
+<li>kops 代表 <strong>Kubernetes Operations</strong></li>
+</ul>
+</li>
+<li>這個工具允許你做產品化等級的 Kubernetes <strong>安裝</strong>、<strong>升級</strong>和<strong>管理</strong></li>
+<li>另外，還有一個叫做 kube-up sh 的<strong>傳統</strong>工具
+<ul>
+<li>這是一個用來建立 cluster 的簡易工具，但現在已經停止維護，它不能用來建立一個產品化準備的環境</li>
+</ul>
+</li>
+<li>Kops 只能運行在 Mac/Linux</li>
+<li>如果你使用 windows，你必須要先啟動虛擬機</li>
+<li>可以使用 Vagrant 來快速建立一個 Linux box</li>
+<li>下載 <a href="https://virtualbox.org" target="_blank" rel="external">Virtualbox</a> 和 <a href="https://vagrantup.com" target="_blank" rel="external">Vagrant</a>，兩個都需要</li>
+<li>下載完之後，建立一個新的虛擬機，然後直接在 cmd/powershell 新增以下指令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mkdir ubuntu</div><div class="line">cd ubuntu</div><div class="line">vagrant init ubuntu/xenial64</div><div class="line">vagrant up</div></pre></td></tr></table></figure>
+<h4>準備 Kops 安裝</h4>
+<ol>
+<li>完成上面的步驟</li>
+<li><code>vagrant ssh-config</code> 檢視 ssh 狀態</li>
+<li><code>vagrant ssh</code> 即可登入虛擬機</li>
+<li><code>puttygen putty</code> 在 windows 上可以使用 putty 來登入</li>
+</ol>
+<h4>為 Kops 安裝準備 AWS</h4>
+<ol>
+<li><a href="https://github.com/kubernetes/kops" target="_blank" rel="external">Kops Github</a></li>
+<li><code>brew update &amp;&amp; brew install kops</code></li>
+<li><code>wget https://github.com/kubernetes/kops/releases/download/1.7.0/kops-linux-amd64</code></li>
+<li><code>chmod +x kops-linux-amd64</code> 新增執行權限</li>
+<li><code>mv kops-linux-amd64 /usr/local/bin/kops</code> 移動 kops</li>
+<li><code>apt-get update &amp;&amp; apt-get install python-pip -y</code></li>
+<li><code>pip install awscli</code></li>
+<li>進入 AWS，選擇服務 IAM (Identity and Access Management)，選擇左列選單 Users，選擇 Add User，命名為 kops，下面選項 Programmatic access 要打勾，下個步驟選擇 AdministratorAccess，完成設定。</li>
+<li><code>aws configure</code></li>
+<li><code>ls -ahl ~/.aws/</code> 檢視 aws credentials</li>
+<li>設定完 IAM 之後，回到服務，選擇 S3，新增 bucket，名稱設定為 kops-state-b429b，最後一個是亂數，因為名稱要是唯一的，地區的選擇要去 <a href="http://www.cloudping.info/" target="_blank" rel="external">cloudping</a> 看哪個最快，選擇最快的就可以了，接下來直接按到完成。</li>
+<li>接下來要設定 DNS，選擇服務 Route53，選擇 DNS management 的 Get Started Now，選擇 Create Hosted Zone，打入自己所擁有的網域，名稱設為 kubernetes，最後到自己的 Domain 主機商那邊設定 DNS。</li>
+</ol>
+<h4>使用 kops 進行 AWS Cluster 設定</h4>
+<ol>
+<li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank" rel="external">安裝 kubectl</a></li>
+<li><code>curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl</code> 下載最新版的 kubectl</li>
+<li><code>chmod +x ./kubectl</code></li>
+<li><code>sudo mv ./kubectl /usr/local/bin/kubectl</code></li>
+<li><code>ssh-keygen -f .ssh/id_rsa</code> 新增 ssh-key</li>
+<li><code>kops create cluster --name=kubernetes.appsoliloquy.com --state=s3://kops-state-b429d --zones=ap-northeast-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes.appsoliloquy.com</code></li>
+<li><code>kops update cluster kubernetes.appsoliloquy.com --yes --state=s3://kops-state-b429d</code></li>
+<li><code>cat .kube/config</code></li>
+<li><code>kubectl get node</code></li>
+<li><code>kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080</code></li>
+<li><code>kubectl expose deployment hello-minikube --type=NodePort</code></li>
+<li><code>kubectl get service</code>，檢查 port</li>
+<li>開啟 Services 的 VPC，點選 Security Groups，點選 master.&lt;自己的 domain&gt;，點選 Inbound Rules，新增 Custom TCP rule，將剛剛取得的 port 貼上、source 設定為 0.0.0.0。</li>
+<li>進去 api.kubernetes.&lt;自己的 domain&gt;：剛剛的 port，就可以看到內容了</li>
+</ol>
 
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blogs/categories/學習歷程/">學習歷程</a>
-            </p>
-            <p class="date"><time datetime="2017-08-10T07:02:09.000Z" itemprop="datePublished">2017-08-10</time></p>
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blogs/2017/08/10/Kubernetes-快速學習自我挑戰-Day1/">Kubernetes 快速學習自我挑戰 Day1</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
+        <footer class="article-footer">
             
 
-Kubernetes 觀念簡介
-什麼是 Kubernetes
 
-Kubernetes 是一個開源的 orchestration system (編排系統)，提供給 Docker containers 做使用
 
-它可以讓你在機器的 cluster 中規劃 containers
-你可以在一台機器上面跑很多 containers
-你可以運行 long running services (像是網頁應用
-        </p>
+    <a data-url="https://tingsyuanwang.github.io/blogs/2017/08/10/Kubernetes-快速學習自我挑戰-Day1/" data-id="cj67zjhov0004co0al7iqovdn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
 
+    <section id="comments">
     
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blogs/2017/08/08/React-Native-快速學習自我挑戰-Day3/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blogs/images/learning/reactNative/reactnativeday3.jpg)" alt="React Native 快速學習自我挑戰 Day3" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="fb-comments-count" data-href="https://tingsyuanwang.github.io/blogs/2017/08/08/React-Native-快速學習自我挑戰-Day3/">0</span> 則評論
-    
-</span>
+      
+    <div class="fb-comments" data-width="100%" data-href="https://tingsyuanwang.github.io/blogs/2017/08/10/Kubernetes-快速學習自我挑戰-Day1/" data-num-posts="5"></div>
 
 
     
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blogs/categories/學習歷程/">學習歷程</a>
-            </p>
-            <p class="date"><time datetime="2017-08-08T09:41:08.000Z" itemprop="datePublished">2017-08-08</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blogs/2017/08/08/React-Native-快速學習自我挑戰-Day3/">React Native 快速學習自我挑戰 Day3</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-
-處理 Component 的排版
-Flexbox 排版
-
-justifyContent: ‘space-between’：上下頂到邊，平均分配空間排列
-justifyContent: ‘space-around’：上下不頂到邊，平均分配空間排列
-flexDirection：‘row’, ‘column’：決定方向
-
-修改版面
-
-修改 AlbumDetail.js，在 react-native 
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blogs/2017/08/05/React-Native-快速學習自我挑戰-Day2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blogs/images/learning/reactNative/reactnativeday2.png)" alt="React Native 快速學習自我挑戰 Day2" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="fb-comments-count" data-href="https://tingsyuanwang.github.io/blogs/2017/08/05/React-Native-快速學習自我挑戰-Day2/">0</span> 則評論
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blogs/categories/學習歷程/">學習歷程</a>
-            </p>
-            <p class="date"><time datetime="2017-08-04T16:43:27.000Z" itemprop="datePublished">2017-08-05</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blogs/2017/08/05/React-Native-快速學習自我挑戰-Day2/">React Native 快速學習自我挑戰 Day2</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-
-React Native 上的 HTTP 請求
-
-新增檔案 /src/components/AlbumList.js
-
-123456789101112import React from &apos;react&apos;;import &#123; View, Text &#125; from &apos;react-native&apos;;const AlbumList = () =&gt
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blogs/2017/08/03/React-Native-快速學習自我挑戰-Day1/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blogs/images/learning/reactNative/reactnativeday1.png)" alt="React Native 快速學習自我挑戰 Day1" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="fb-comments-count" data-href="https://tingsyuanwang.github.io/blogs/2017/08/03/React-Native-快速學習自我挑戰-Day1/">0</span> 則評論
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blogs/categories/學習歷程/">學習歷程</a>
-            </p>
-            <p class="date"><time datetime="2017-08-03T10:50:32.000Z" itemprop="datePublished">2017-08-03</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blogs/2017/08/03/React-Native-快速學習自我挑戰-Day1/">React Native 快速學習自我挑戰 Day1</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-
-開始課程
-第一支程式的 Roadmap
-
-在每個作業系統安裝 dependencires
-針對不同編輯器安裝不同的 ESLint
-生成 React Native 專案
-課程 Repo
-
-在不同的系統部署環境
-OSX 安裝流程
-
-了解 Dependency 的用途
-
-XCode：打包程式和 React Natvie Library 到可安裝的 app，然後用 iOS 模擬器運行
-HomeBrew
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blogs/2017/08/02/docker-快速學習自我挑戰-Day8/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blogs/images/learning/docker/dockerday8.png)" alt="docker 快速學習自我挑戰 Day8" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="fb-comments-count" data-href="https://tingsyuanwang.github.io/blogs/2017/08/02/docker-快速學習自我挑戰-Day8/">0</span> 則評論
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blogs/categories/學習歷程/">學習歷程</a>
-            </p>
-            <p class="date"><time datetime="2017-08-02T05:54:52.000Z" itemprop="datePublished">2017-08-02</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blogs/2017/08/02/docker-快速學習自我挑戰-Day8/">docker 快速學習自我挑戰 Day8</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-
-Container Registry：Image Storage and Distribution
-Docker Hub：探尋的更深入
-Container Registries
-
-你的 Container plan 需要有 Image Registry 成為 plan 的一部分
-更多 Docker Hub 的細節，包含 auto-build
-Docker Store 是怎麼樣跟 Hub 不一樣
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/blogs/2017/08/01/docker-快速學習自我挑戰-Day7/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blogs/images/learning/docker/dockerday7.png)" alt="docker 快速學習自我挑戰 Day7" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="fb-comments-count" data-href="https://tingsyuanwang.github.io/blogs/2017/08/01/docker-快速學習自我挑戰-Day7/">0</span> 則評論
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/blogs/categories/學習歷程/">學習歷程</a>
-            </p>
-            <p class="date"><time datetime="2017-08-01T10:38:10.000Z" itemprop="datePublished">2017-08-01</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/blogs/2017/08/01/docker-快速學習自我挑戰-Day7/">docker 快速學習自我挑戰 Day7</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            
-
-Docker 服務和 Swarm 的威力： Build-In Orchestration
-Swarms Stacks 和產品化等級的 Compose
-
-在 1.13 版本，Docker 增加了一個新的抽象層到 Swarm，且命名為 Stacks
-Stacks 接受的 Compose files 如同他們對 Services、Networks 和 Volumes 的聲明性定義
-我們使用 dock
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -551,6 +511,19 @@ Stacks 接受的 Compose files 如同他們對 Services、Networks 和 Volumes �
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blogs/2017/08/08/React-Native-快速學習自我挑戰-Day3/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">React Native 快速學習自我挑戰 Day3</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
