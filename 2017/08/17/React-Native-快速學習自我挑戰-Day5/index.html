@@ -3,32 +3,44 @@
 <head>
     <meta charset="utf-8">
     
-    <title>HelloJS專案開發提議 | Vincent&#39;s Corner</title>
+    <title>React Native 快速學習自我挑戰 Day5 | Vincent&#39;s Corner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="React-Native" />
     
-    <meta name="description" content="(1) PokeHunt
-最近看到新聞，很多人玩寶可夢掉下懸崖、誤觸地雷區、甚至是在路上被車撞，我覺得我們是不是可以做一個偵測系統？大家有什麼方法可以提供一下？目前暫時只是概念性的解決問題，如果大家決定做這個就來討論一下細節。
-(2) 翻轉文學聊天室
-在我大學時期有做一個翻轉文學的網站，我想說來做一點延伸，就是做聊天室、有全體的，還有同學個別對個別的，還有像是github issue一樣的討論區">
+    <meta name="description" content="處理 Authentication Credentials
+讓 User 登入
+
+在送出 button 地方，要取得值之後，做 callback function
+在送出的 button 加上 onPress 來取得值
+&amp;lt;Button onPress={this.onButtonPress.bind(this)}&amp;gt;
+在 LoginForm.js 引入 firebase
+import">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HelloJS專案開發提議">
-<meta property="og:url" content="https://tingsyuanwang.github.io/2016/08/30/HelloJS專案開發提議/index.html">
+<meta property="og:title" content="React Native 快速學習自我挑戰 Day5">
+<meta property="og:url" content="https://tingsyuanwang.github.io/2017/08/17/React-Native-快速學習自我挑戰-Day5/index.html">
 <meta property="og:site_name" content="Vincent's Corner">
-<meta property="og:description" content="(1) PokeHunt
-最近看到新聞，很多人玩寶可夢掉下懸崖、誤觸地雷區、甚至是在路上被車撞，我覺得我們是不是可以做一個偵測系統？大家有什麼方法可以提供一下？目前暫時只是概念性的解決問題，如果大家決定做這個就來討論一下細節。
-(2) 翻轉文學聊天室
-在我大學時期有做一個翻轉文學的網站，我想說來做一點延伸，就是做聊天室、有全體的，還有同學個別對個別的，還有像是github issue一樣的討論區">
-<meta property="og:image" content="https://tingsyuanwang.github.io/blogs/images/hellojs.jpg">
-<meta property="og:updated_time" content="2016-09-06T21:42:52.000Z">
+<meta property="og:description" content="處理 Authentication Credentials
+讓 User 登入
+
+在送出 button 地方，要取得值之後，做 callback function
+在送出的 button 加上 onPress 來取得值
+&amp;lt;Button onPress={this.onButtonPress.bind(this)}&amp;gt;
+在 LoginForm.js 引入 firebase
+import">
+<meta property="og:image" content="https://tingsyuanwang.github.io/blogs/images/learning/reactNative/reactnativeday5.png">
+<meta property="og:updated_time" content="2017-08-19T05:39:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HelloJS專案開發提議">
-<meta name="twitter:description" content="(1) PokeHunt
-最近看到新聞，很多人玩寶可夢掉下懸崖、誤觸地雷區、甚至是在路上被車撞，我覺得我們是不是可以做一個偵測系統？大家有什麼方法可以提供一下？目前暫時只是概念性的解決問題，如果大家決定做這個就來討論一下細節。
-(2) 翻轉文學聊天室
-在我大學時期有做一個翻轉文學的網站，我想說來做一點延伸，就是做聊天室、有全體的，還有同學個別對個別的，還有像是github issue一樣的討論區">
-<meta name="twitter:image" content="https://tingsyuanwang.github.io/blogs/images/hellojs.jpg">
+<meta name="twitter:title" content="React Native 快速學習自我挑戰 Day5">
+<meta name="twitter:description" content="處理 Authentication Credentials
+讓 User 登入
+
+在送出 button 地方，要取得值之後，做 callback function
+在送出的 button 加上 onPress 來取得值
+&amp;lt;Button onPress={this.onButtonPress.bind(this)}&amp;gt;
+在 LoginForm.js 引入 firebase
+import">
+<meta name="twitter:image" content="https://tingsyuanwang.github.io/blogs/images/learning/reactNative/reactnativeday5.png">
 <meta property="fb:admins" content="dtvgood202">
 <meta property="fb:app_id" content="176717762750155">
     
@@ -150,19 +162,19 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blogs/categories/生活記事/">生活記事</a>
+    <a class="page-title-link" href="/blogs/categories/學習歷程/">學習歷程</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-HelloJS專案開發提議" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-React-Native-快速學習自我挑戰-Day5" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        HelloJS專案開發提議
+        React Native 快速學習自我挑戰 Day5
         </h1>
     
 
@@ -170,30 +182,131 @@ ga('send', 'pageview');
         
         
             <div class="article-subtitle">
-                <a href="/blogs/2016/08/30/HelloJS專案開發提議/" class="article-date">
-    <time datetime="2016-08-30T12:55:48.000Z" itemprop="datePublished">2016-08-30</time>
+                <a href="/blogs/2017/08/17/React-Native-快速學習自我挑戰-Day5/" class="article-date">
+    <time datetime="2017-08-17T08:39:32.000Z" itemprop="datePublished">2017-08-17</time>
 </a>
                 
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blogs/tags/React-Native/">React-Native</a></li></ul>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <img src="/blogs/images/hellojs.jpg">
-(1) PokeHunt
-最近看到新聞，很多人玩寶可夢掉下懸崖、誤觸地雷區、甚至是在路上被車撞，我覺得我們是不是可以做一個偵測系統？大家有什麼方法可以提供一下？目前暫時只是概念性的解決問題，如果大家決定做這個就來討論一下細節。
-<p>(2) 翻轉文學聊天室<br>
-在我大學時期有做一個<a href="http://flipliterature.tw" target="_blank" rel="external">翻轉文學的網站</a>，我想說來做一點延伸，就是做聊天室、有全體的，還有同學個別對個別的，還有像是github issue一樣的討論區塊，這個我目前有些規劃，如果大家對即時條天有興趣我們可以做這個，這個的架構我就比較清楚要怎麼做，較好上手。</p>
-<p>(3) 中草藥不良反應通報系統<br>
-這是目前我在中國醫藥大學想做的專案，現在有很多中草藥的通報系統，但是目前卻沒有手機板的，而且填寫複雜，架構基本上已經定案，因為他有固定格式。<br>
-因為我們學校跟衛生福利部的關係非常好，如果這個App有開發完成，我會盡力爭取上線，未來如果順利上線，可以跟政府申請一筆經費，看能不能跟大家來做大的？</p>
-
+            <img src="/blogs/images/learning/reactNative/reactnativeday5.png">
+<hr>
+<h3>處理 Authentication Credentials</h3>
+<h4>讓 User 登入</h4>
+<ol>
+<li>在送出 button 地方，要取得值之後，做 callback function</li>
+<li>在送出的 button 加上 onPress 來取得值<br>
+<code>&lt;Button onPress={this.onButtonPress.bind(this)}&gt;</code></li>
+<li>在 LoginForm.js 引入 firebase<br>
+<code>import firebase from 'firebase';</code></li>
+<li>新增 onButtonPress 的 callback function</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">onButtonPress() &#123;</div><div class="line">        const &#123; email, password &#125; = this.state;</div><div class="line"></div><div class="line">        firebase.auth().signInWithEmailAndPassword(email, password);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<ol start="5">
+<li>登入的三種模式
+<ul>
+<li>登入 =&gt; 成功</li>
+<li>登入 =&gt; 失敗 =&gt; 創建帳號 =&gt; 成功</li>
+<li>登入 =&gt; 失敗 =&gt; 創建帳號 =&gt; 失敗 =&gt; 出現錯誤</li>
+</ul>
+</li>
+</ol>
+<h4>錯誤處理</h4>
+<ol>
+<li>點擊之後，用 catch 來處理失敗的 Promise，最後顯示出 error，error 要新增一個空白的 state 讓它去改變</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">state = &#123; email: &apos;&apos;, password: &apos;&apos;, error: &apos;&apos; &#125;;</div><div class="line"></div><div class="line">    onButtonPress() &#123;</div><div class="line">        const &#123; email, password &#125; = this.state;</div><div class="line"></div><div class="line">        firebase.auth().signInWithEmailAndPassword(email, password)</div><div class="line">            .catch(() =&gt; &#123;</div><div class="line">                firebase.auth().createUserWithEmailAndPassword(email, password)</div><div class="line">                    .catch(() =&gt; &#123;</div><div class="line">                        this.setState(&#123; error: &apos;Authentication Failed.&apos;&#125;)</div><div class="line">                    &#125;);</div><div class="line">            &#125;);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<ol start="2">
+<li>把 Text 補回來，因為要讓 error 顯示<br>
+<code>import { Text } from 'react-native';</code></li>
+<li>新增 Text 區塊來顯示 error</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Text style=&#123;styles.errorTextStyle&#125;&gt;</div><div class="line">    &#123;this.state.error&#125;</div><div class="line">&lt;/Text&gt;</div></pre></td></tr></table></figure>
+<ol start="4">
+<li>新增 error Text 的 style 樣式</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const styles = &#123;</div><div class="line">    errorTextStyle: &#123;</div><div class="line">        fontSize: 20,</div><div class="line">        alignSelf: &apos;center&apos;,</div><div class="line">        color: &apos;red&apos;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h4>更多 Authentication Flow</h4>
+<ol>
+<li>在登入錯誤的密碼之後，如果又正確登入，要把錯誤訊息移除，所以要在 onPress 的 callback function 裡面把 state 設為預設空值<br>
+<code>this.setState({error: ''});</code></li>
+<li>為了要讓送出的時候，等候存取資料庫回覆前，要做一個旋轉圖示 Spinner 讓用戶知道在等候，新增 src/components/Spinner.js</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import React from &apos;react&apos;;</div><div class="line">import &#123; View &#125; from &apos;react-native&apos;;</div><div class="line"></div><div class="line">const Spinner = () =&gt; &#123;</div><div class="line">    return (</div><div class="line">        &lt;View /&gt;</div><div class="line">    );</div><div class="line">&#125;;</div><div class="line"></div><div class="line">export &#123; Spinner &#125;;</div></pre></td></tr></table></figure>
+<ol start="3">
+<li>在 components/index.js 新增 component<br>
+<code>export * from './Spinner';</code></li>
+</ol>
+<h4>建立一個活動 Spinner</h4>
+<ol>
+<li>新增 ActivityIndicator<br>
+<code>import { View, ActivityIndicator } from 'react-native';</code></li>
+<li>新增 spinner styles</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const styles = &#123;</div><div class="line">    spinnerStyle: &#123;</div><div class="line">        flex: 1,</div><div class="line">        justifyContent: &apos;center&apos;,</div><div class="line">        alignItems: &apos;center&apos;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ol start="3">
+<li>將 style 加到 View，然後從上層元件取得 size props，最後用預設的方式，如果沒有 size 的 props，預設 large</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const Spinner = (&#123; size &#125;) =&gt; &#123;</div><div class="line">    return (</div><div class="line">        &lt;View style=&#123;styles.spinnerStyle&#125;&gt;</div><div class="line">            &lt;ActivityIndicator size=&#123;size || &apos;large&apos;&#125; /&gt;</div><div class="line">        &lt;/View&gt;</div><div class="line">    );</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h4>JSX 中有條件的渲染</h4>
+<ol>
+<li>預設不顯示 loading<br>
+<code>state = { email: '', password: '', error: '', loading: false };</code></li>
+<li>在 onButtonPress 的 callback function 加上 loading true，做法就是在點選登入時，清掉所有錯誤，然後顯示 Loading<br>
+<code>this.setState({error: '', loading: true });</code></li>
+<li>把 Spinner 的元件也 load 進來<br>
+<code>import { Button, Card, CardSection, Input, Spinner } from &quot;./common&quot;;</code></li>
+<li>新增一個 renderButton 的 function，如果 this.state.loading === true，就 return spinner，如果不是，就 return 本來的 Button</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">renderButton() &#123;</div><div class="line">    if (this.state.loading) &#123;</div><div class="line">        return &lt;Spinner size=&quot;small&quot; /&gt;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return (</div><div class="line">        &lt;Button onPress=&#123;this.onButtonPress.bind(this)&#125;&gt;</div><div class="line">            登入</div><div class="line">        &lt;/Button&gt;</div><div class="line">    )</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol start="5">
+<li>最後把本來送出 Button 的地方用 renderButton 的 function 取代</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;CardSection&gt;</div><div class="line">    &#123;this.renderButton()&#125;</div><div class="line">&lt;/CardSection&gt;</div></pre></td></tr></table></figure>
+<h4>清除表單 Spinner</h4>
+<ol>
+<li>建立 LoginSuccess function</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">onLoginSuccess() &#123;</div><div class="line">    this.setState(&#123;</div><div class="line">        email: &apos;&apos;,</div><div class="line">        password: &apos;&apos;,</div><div class="line">        loading: false,</div><div class="line">        error: &apos;&apos;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol start="2">
+<li>建立 LoginFail function</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">onLoginFail() &#123;</div><div class="line">    this.setState(&#123; error: &apos;Authentication Failed&apos;, loading: false &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol start="3">
+<li>送出表單時候，正確的話，執行 .then 裡面的 function，錯誤的話，執行 .catch 裡面的 function</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">firebase.auth().signInWithEmailAndPassword(email, password)</div><div class="line">    .then(this.onLoginSuccess.bind(this))</div><div class="line">    .catch(() =&gt; &#123;</div><div class="line">        firebase.auth().createUserWithEmailAndPassword(email, password)</div><div class="line">            .then(this.onLoginSuccess.bind(this))</div><div class="line">            .catch(this.onLoginFail.bind(this));</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<h4>處理 Authentication 事件</h4>
+<ol>
+<li>新增一個 state 叫做 loggedIn，預設為未登入，然後在 componentWillMount 新增 onAuthStateChanged 的 function，如果是 user 就登入</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">state = &#123; loggedIn: false &#125;;</div><div class="line"></div><div class="line">componentWillMount() &#123;</div><div class="line">    firebase.auth().onAuthStateChanged((user) =&gt; &#123;</div><div class="line">        if (user) &#123;</div><div class="line">            this.setState(&#123; loggedIn: true&#125;);</div><div class="line">        &#125; else &#123;</div><div class="line">            this.setState(&#123; loggedIn: false &#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4>更多有條件的渲染</h4>
+<ol>
+<li>把 loggedIn 的 state 改成 null，然後新增 renderContent，登入時在讀取資料會先跑出 Spinner，成功的話就顯示登出的 Button，失敗的話就回到登入表單</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">state = &#123; loggedIn: null &#125;;</div><div class="line"></div><div class="line">renderContent() &#123;</div><div class="line">    switch (this.state.loggedIn) &#123;</div><div class="line">        case true:</div><div class="line">            return &lt;Button&gt;登出&lt;/Button&gt;;</div><div class="line">        case false:</div><div class="line">            return &lt;LoginForm /&gt;;</div><div class="line">        default:</div><div class="line">            return &lt;Spinner size=&quot;large&quot;/&gt;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol start="2">
+<li>引入 Button 和 Spinner<br>
+<code>import { Header, Button, Spinner } from './components/common';</code></li>
+<li>修改 button 樣式，修改 src/component/common/Button.js</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">import React from &apos;react&apos;;</div><div class="line">import &#123; View, Text, TouchableOpacity &#125; from &apos;react-native&apos;;</div><div class="line"></div><div class="line">const Button = (&#123; onPress, children &#125;) =&gt; &#123;</div><div class="line">    const &#123; buttonStyle, textStyle, viewStyle &#125; = styles;</div><div class="line"></div><div class="line">    return (</div><div class="line">        &lt;View style=&#123;viewStyle&#125;&gt;</div><div class="line">            &lt;TouchableOpacity onPress=&#123;onPress&#125; style=&#123;buttonStyle&#125;&gt;</div><div class="line">                &lt;Text style=&#123;textStyle&#125;&gt;</div><div class="line">                    &#123;children&#125;</div><div class="line">                &lt;/Text&gt;</div><div class="line">            &lt;/TouchableOpacity&gt;</div><div class="line">        &lt;/View&gt;</div><div class="line">    );</div><div class="line">&#125;;</div><div class="line"></div><div class="line">const styles = &#123;</div><div class="line">    textStyle: &#123;</div><div class="line">        alignSelf: &apos;center&apos;,</div><div class="line">        color: &apos;#007aff&apos;,</div><div class="line">        fontSize: 16,</div><div class="line">        fontWeight: &apos;600&apos;,</div><div class="line">        paddingTop: 10,</div><div class="line">        paddingBottom: 10</div><div class="line">    &#125;,</div><div class="line">    viewStyle: &#123;</div><div class="line">        flexDirection: &apos;row&apos;,</div><div class="line">    &#125;,</div><div class="line">    buttonStyle: &#123;</div><div class="line">        flex: 1,</div><div class="line">        alignSelf: &apos;stretch&apos;,</div><div class="line">        justifyContent: &apos;center&apos;,</div><div class="line">        height: 45,</div><div class="line">        backgroundColor: &apos;#fff&apos;,</div><div class="line">        borderRadius: 5,</div><div class="line">        borderWidth: 1,</div><div class="line">        borderColor: &apos;#007aff&apos;,</div><div class="line">        marginLeft: 5,</div><div class="line">        marginRight: 5</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">export &#123; Button &#125;;</div></pre></td></tr></table></figure>
+<h4>讓 User 登出和結束</h4>
+<ol>
+<li>用 firebase 的語法讓用戶登出</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">return (</div><div class="line">    &lt;Button onPress=&#123;() =&gt; firebase.auth().signOut()&#125;&gt;</div><div class="line">        登出</div><div class="line">    &lt;/Button&gt;</div><div class="line">);</div></pre></td></tr></table></figure>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://tingsyuanwang.github.io/blogs/2016/08/30/HelloJS專案開發提議/" data-id="cj6ivk5iq0005jx0aid8ra4y3" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://tingsyuanwang.github.io/blogs/2017/08/17/React-Native-快速學習自我挑戰-Day5/" data-id="cj6ivk5m2003jjx0aaknkaqny" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -260,7 +373,7 @@ ga('send', 'pageview');
     <section id="comments">
     
       
-    <div class="fb-comments" data-width="100%" data-href="https://tingsyuanwang.github.io/blogs/2016/08/30/HelloJS專案開發提議/" data-num-posts="5"></div>
+    <div class="fb-comments" data-width="100%" data-href="https://tingsyuanwang.github.io/blogs/2017/08/17/React-Native-快速學習自我挑戰-Day5/" data-num-posts="5"></div>
 
 
     
@@ -321,20 +434,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/blogs/2016/09/03/The-connection-of-people-in-the-age-of-information/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">下一篇</strong>
-        <p class="article-nav-title">
-        
-            The connection of people in the age of information
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/blogs/2016/08/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/blogs/2017/08/16/React-Native-快速學習自我挑戰-Day4/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Hello World</p>
+        <p class="article-nav-title">React Native 快速學習自我挑戰 Day4</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
